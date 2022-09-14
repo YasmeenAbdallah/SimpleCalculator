@@ -34,7 +34,7 @@ namespace SimpleCalculator.Controllers
                 CalculationResultsModel obj = new CalculationResultsModel();
                 double num1 = 0;
                 double num2 = 0;
-              //  according to  Identity Element theory
+              //  according to  Identity Element theory test if the first num is empty
                 if (String.IsNullOrEmpty(nums.Num1.ToString()) && double.TryParse(nums.Num2.ToString(), out num2))
                 {
                     if (num2 <= 100000000000 && num2 >= -100000000000)
@@ -56,7 +56,11 @@ namespace SimpleCalculator.Controllers
 
                         return Ok(obj);
                     }
+                    return BadRequest("please enter the  numbers in range (-100 billion , 100 billion )  ");
+
                 }
+                //  according to  Identity Element theory test if the secon num is empty
+
                 if (String.IsNullOrEmpty(nums.Num2.ToString()) && double.TryParse(nums.Num1.ToString(), out num1))
                 {
                     if (num1 <= 100000000000 && num1 >= -100000000000)
@@ -70,20 +74,23 @@ namespace SimpleCalculator.Controllers
 
                         return Ok(obj);
                     }
+                    return BadRequest("please enter the  numbers in range (-100 billion , 100 billion )  ");
+
                 }
+                // if the inputs not numbers
                 if (!double.TryParse(nums.Num1.ToString(), out num1) || !double.TryParse(nums.Num2.ToString(), out num2))
                 {
                     return BadRequest("please enter a valid  numbers  ");
                 }
+                //check if the number in range
+                double.TryParse(nums.Num1.ToString(), out num1);
+                double.TryParse(nums.Num2.ToString(), out num2);
                 if (num1 > 100000000000 || num1 < -100000000000 || num2 > 100000000000 || num2 < -100000000000)
                 {
                     return BadRequest("please enter the  numbers in range (-100 billion , 100 billion )  ");
                 }
-              
-
-
-               
-                
+    
+                // perform the operation
                 obj.Summation = (_OperationServices.Add(num1, num2)).ToString(); ;
                 obj.Subtraction = (_OperationServices.Subtract(num1, num2)).ToString();
                 obj.Multiplication = (_OperationServices.Multiply(num1, num2)).ToString();
