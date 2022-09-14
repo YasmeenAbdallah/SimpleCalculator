@@ -8,10 +8,14 @@ namespace SimpleCalculator.Models
     public class NumbersModel
     {
 
-        //the results for adding
+        /// <summary>
+        /// the first number
+        /// </summary>
         public object Num1 { get; set; }
 
-        //the results for Multiplication
+        /// <summary>
+        /// the second number
+        /// </summary>
         public object Num2 { get; set; }
     }
 }
