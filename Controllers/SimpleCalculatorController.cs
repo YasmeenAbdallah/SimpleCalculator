@@ -36,7 +36,7 @@ namespace SimpleCalculator.Controllers
                 double num2 = 0;
                 if (!double.TryParse(nums.Num1.ToString(), out num1)|| !double.TryParse(nums.Num2.ToString(), out num2))
                 {
-                    return BadRequest("please enter the  numbers correctly ");
+                    return BadRequest("please enter a valid  numbers  ");
                 }
               
                 if (num1 > 100000000000 || num1 < -100000000000 || num2 > 100000000000 || num2 < -100000000000)

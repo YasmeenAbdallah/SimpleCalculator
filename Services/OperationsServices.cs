@@ -7,27 +7,47 @@ namespace SimpleCalculator.Services
 {
     public class OperationsServices : IOperationsServices
     {
-        // Implement the add function 
+        /// <summary>
+        /// the adding function
+        /// </summary>
+        /// <param name="num1"> the first number </param>
+        /// <param name="num2">the second number</param>
+        /// <returns></returns>
         public double Add(double num1, double num2)
         {
             return (num1 + num2);
         }
 
-        // Implement the subtract 
+        /// <summary>
+        /// the Subtraction function
+        /// </summary>
+        /// <param name="num1"> the first number </param>
+        /// <param name="num2">the second number</param>
+        /// <returns></returns> 
         public double Subtract(double num1, double num2)
         {
             return (num1 - num2);
         }
 
 
-        // Implement the multiply function
+        /// <summary>
+        /// the Multiplying function
+        /// </summary>
+        /// <param name="num1"> the first number </param>
+        /// <param name="num2">the second number</param>
+        /// <returns></returns>
         public double Multiply(double num1, double num2)
         {
             
             return (num1 * num2);
         }
 
-        // Implement the divide function 
+        /// <summary>
+        /// the Dividion function
+        /// </summary>
+        /// <param name="num1"> the first number </param>
+        /// <param name="num2">the second number</param>
+        /// <returns></returns> 
         public double Divide(double num1, double num2)
         {
 

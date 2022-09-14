@@ -7,17 +7,27 @@ namespace SimpleCalculator.Models
 {
     public class CalculationResultsModel
     {
-        //the results for adding
+      /// <summary>
+      /// the result of summation
+      /// </summary>
         public string Summation { get; set; }
 
-        //the results for Multiplication
+       
+        /// <summary>
+        /// the results for Multiplication
+        /// </summary>
         public string Multiplication { get; set; }
 
-        //the results for Subtraction
-
+       
+        /// <summary>
+        /// the results for Subtraction
+        /// </summary>
         public string Subtraction { get; set; }
 
-        //the results for Divivsion
+        
+        /// <summary>
+        /// the results for Divivsion
+        /// </summary>
         public string Divivsion { get; set; }
     }
 }
